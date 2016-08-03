@@ -1,0 +1,77 @@
+
+
+
+<div class="row">
+        <div class="col-sm-4">
+          <div class="well">
+            <h1>Personal</h1>
+
+</div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Produccion</h1>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Ventas</h1>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Compras</h1>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Inventarios</h1>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Contabilidad</h1>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="well">
+<h1>Administracion <a id="admin" onclick="chevronToggle('admin')" data-toggle="collapse" data-target="#demo"
+  class="glyphicon glyphicon-chevron-right" style="text-decoration:none;color:gray;font-size:24px;cursor:pointer"></a></h1>
+
+
+
+<div id="demo" class="collapse">
+<hr>
+
+
+   <small>  <%= link_to 'Empresa',
+company_path, "data-toggle"=>"modal",
+         "data-target"=>".bd-example-modal-md","id"=>"dm",
+         "data-backdrop"=>"static", "data-keyboard" => "false" %> </small>
+</small>
+
+<hr>
+
+
+
+
+
+  <small>  <%= link_to'Empleado',
+ employees_list_path,onclick:"window.location.reload();" %></small>
+
+
+ <div  class="modal fade bd-example-modal-md" tabindex="-1" role="dialog"
+   aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content" style="padding:3%" >
+
+  </div>
+    </div>
+  </div>
+
+
+</div>
+  </div>
+</div>
+
+ 

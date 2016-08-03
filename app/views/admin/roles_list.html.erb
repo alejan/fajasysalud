@@ -1,0 +1,18 @@
+<h1>Roles<button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span  aria-hidden="true">&#10006;</span>
+        </button></span></h1>
+        	
+<hr>
+
+<%=form_tag(controller:'admin',action:'add_roles') do %>
+<%=hidden_field_tag 'id', @user.id %>
+<%=content_tag :table do %>
+
+
+<% @roles.each do |t| %>
+<%=content_tag :tr,content_tag(:td,check_box_tag(t.name,1,user_helper(t.name,@user)))+content_tag(:td,t.name) %>
+<% end %>
+<% end %>
+<hr>
+<%=submit_tag 'guardar',class:"btn btn-primary" %>
+<% end %>

@@ -1,0 +1,28 @@
+
+<%= form_for @user do |t| %>
+<%=t.hidden_field :id %>
+<div class="row ">
+<%=content_tag :div,
+ t.label(:username,'Username:',for:"username")+t.text_field(:username,id:"username",
+ class:"form-control"),class:"form-group" %>
+</div>
+<div class="row ">
+<%=content_tag :div,
+ t.label(:password,'Password:',for:"password")+t.password_field(:password,id:"password",
+  size: 40,class:"form-control"),class:"form-group" %>
+</div>
+<div class="row ">
+<%=content_tag :div,
+ t.label(:password_confirmation,'Confirmar:',for:"confirm")+t.password_field(:password_confirmation,
+ id:"confirm",size: 40,class:"form-control"),class:"form-group" %>
+</div>
+
+<%= t.hidden_field :employee_id %>
+
+ 
+   <%=t.submit 'Guardar',class:"btn btn-primary btn-md " %>
+  <% if @user.id %>
+ <%=button_to 'Eliminar Usuario', user_path(:id), method:"delete", class:"btn btn-danger btn-md" %>
+    <% end %>
+
+<% end %>

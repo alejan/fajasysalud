@@ -1,0 +1,38 @@
+<%=form_for @employee,role:"form" do |t| %>
+<div class="row ">
+	
+  <%= content_tag :div,
+ 
+  t.label(:name,"Name:",for:"name")+t.text_field(:name,id:"name",class:"form-control"),
+  class:"form-group" %>
+  
+</div>
+<div class="row ">
+  <%= content_tag :div,
+  t.label(:last,"Last Name:",for:"last")+t.text_field(:last,id:"last",class:"form-control"),
+  class:"form-group" %>
+</div>
+<div class="row ">
+  <%= content_tag :div,
+  t.label(:phone,"Phone:",for:"phone")+t.text_field(:phone,id:"phone",class:"form-control"),
+  class:"form-group" %>
+</div>
+<div class="row ">
+  <%= content_tag :div,
+  t.label(:address,"Address:",for:"address")+t.text_field(:address,id:"address",class:"form-control"),
+  class:"form-group" %>
+</div>
+<div class="row ">
+  <%= content_tag :div,
+  t.label(:email,"e-mail:",for:"e-mail")+t.text_field(:email,id:"e-mail",class:"form-control",type:"email"),
+  class:"form-group" %>
+</div><p>
+	
+<div class="row ">
+  <%=t.hidden_field :company_id %>
+  <%=t.hidden_field :id %>
+  
+
+   <%=t.submit 'Guardar',class:"btn btn-primary btn-md" %>
+   </div>
+<% end %>

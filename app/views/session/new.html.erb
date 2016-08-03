@@ -1,0 +1,22 @@
+<%= image_tag("parallax2.jpg",:class=>"style_image") %>
+
+<% if flash[:alert] %>
+<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+
+<div  class="login">
+
+<%= form_tag @user, role:'form' do %>
+<%= content_tag :div,
+ content_tag(:label,"Username:",for:"username")+text_field_tag(:username, params[:username], class:"form-control"),
+  class:"form-group"
+  %>
+  <%= content_tag :div,
+   content_tag(:label,"Password:",for:"password")+text_field_tag(:password,params[:password], class:"form-control",type:"password"),
+    class:"form-group"
+    %>
+
+<%= submit_tag "Login", class:"btn btn-default " %>
+ </div>
+
+<% end %>

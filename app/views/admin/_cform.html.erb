@@ -1,0 +1,37 @@
+
+<%= form_for @company, role:"form" do |t| %>
+<div class="row">
+ <%= content_tag :div,
+ t.label(:name,"Name:",for:"name")+t.text_field(:name,id:"name",class:"form-control"),
+ class:"form-group" %>
+ </div>
+ <div class="row">
+ <%= content_tag :div,
+ t.label(:nit,"Nit:",for:"nit")+t.text_field(:nit,id:"nit",class:"form-control"),
+ class:"form-group" %>
+ </div>
+ <div class="row">
+ <%= content_tag :div,
+ t.label(:website,"Website:",for:"website")+t.text_field(:website,id:"website",class:"form-control"),
+ class:"form-group" %>
+ </div>
+<div class="row">
+ <%= content_tag :div,
+ t.label(:email,"e-mail:",for:"email")+t.text_field(:email,id:"e-mail",type:"email",class:"form-control"),
+ class:"form-group" %>
+ </div>
+<div class="row">
+ <%= content_tag :div,
+ t.label(:phone,"Phone:",for:"phone")+t.text_field(:phone,id:"phone",class:"form-control"),
+ class:"form-group" %>
+ </div>
+<div class="row">
+ <%= content_tag :div,
+ t.label(:address,"Address:",for:"address")+t.text_field(:address,id:"address",class:"form-control"),
+ class:"form-group" %>
+</div>
+<div class="row">
+
+   <%=t.submit 'Guardar',class:"btn btn-primary" %>
+   </div>
+   <% end %>

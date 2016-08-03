@@ -1,0 +1,15 @@
+<% if params['uid']=="sin asignar" %>
+<h2>Crear usuario<button  type="button" class="close" data-dismiss="modal" aria-label="Close"style="padding-right:10px">
+          <span aria-hidden="true">&#10006;</span>
+        </button></span></h2>
+<% else %>
+<h2>Editar usuario <button  type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding-right:10px">
+          <span aria-hidden="true">&#10006;</span>
+        </button></span></h2>
+<% end %>
+<div class="panel panel-default"  style="padding:3%">
+
+<div class="panel-body">
+<%= render 'uform' %>
+</div>
+</div>
